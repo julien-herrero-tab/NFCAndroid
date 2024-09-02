@@ -14,6 +14,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.qifan.nfcbank.cardEmulation.KHostApduService
+import com.qifan.nfcbank.cardEmulation.KHostApduService.Companion.GOOGLE_URL
 
 /**
  * Created by Qifan on 28/11/2018.
@@ -37,6 +38,7 @@ class CardEmulatorActivity : AppCompatActivity() {
     }
 
     private fun initNFCFunction() {
+        editText.setText(GOOGLE_URL)
         if (supportNfcHceFeature()) {
             textView.visibility = View.GONE
             editText.visibility = View.VISIBLE
